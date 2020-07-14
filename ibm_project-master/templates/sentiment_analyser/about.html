@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!--Bootstrap CSS-->
+       {% load static %}
+        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+        <link href="{% static 'css/bootstrap-grid.min.css' %}" rel="stylesheet"> 
+        <link href="{% static 'css/style.css' %}" rel="stylesheet">
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>  
+        <title>RADR-About</title>
+    </head>
+    <body class="bdyclr">
+        <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#team">RADR</a>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link active" href="{% url 'home' %}">Home<span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link active" href="{% url 'about' %}">About</a>
+                    <a class="nav-item nav-link active" href="{% url 'form' %}">Register</a>
+                    <a class="nav-item nav-link active" href="{% url 'dashboard2' %}">Dashboard</a>
+                </div>
+            </div>
+        </nav>
+        <!--
+<div class="col-sm-12 twitter">
+</div>
+-->
+        <div class="jumbotron first">
+            <h1 class="display-3">Twitter Sentiment Analysis</h1>
+            <p class="lead">A predictive model for analyzing the sentiments using tweets with an accuracy of 95%</p>
+            <hr class="my-4">
+            <p>To access the project related files check below</p>
+            <p class="lead">
+                <a class="btn btn-primary btn-lg" href="#" role="button">Project Files</a>
+            </p>
+            <table>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="firstpara">
+
+                            <div class="container ctrg">
+                                <div class="box"><br>
+                                    <h4>Purpose Of This Project</h4>
+                                    <article>
+                                        The sentiment analysis of Indians after the extension of lockdown announcements are to be analyzed with the relevant #tags on twitter and build a predictive analytics model to understand the behavior of people if the lockdown is further extended.Also developing a dashboard with visualization of people reaction to the govt announcements on lockdown extension and deploying it in the IBM cloud<br><br><br>
+                                    </article>
+                                </div>
+                                <div class="box"><br>
+                                    <h4>Tools Used</h4>
+                                    <article>
+                                        <b>Google Colaboratory, IBM cloud, Django for deployment, Python 3, Pandas, numpy, keras, nltk, twitter, Matplotlib, VADER</b><br><br><br><br><br>
+                                    </article>
+                                </div>
+                                <div class="box"><br>
+                                    <h4>MODEL ADOPTED</h4>
+                                    <article>
+                                        After training and testing several models the model we decided upon
+
+                                        Logistic Regression with Term Frequency(TF) and Inverse Document Frequency(IDF) (i.e) <b>LR with TF-IDF</b> is built with an accuracy of <b>95%</b><br><br><br>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--
+<div class="col-sm-6">
+<div class="firstpara">
+<br><br>
+<h2 class="h2-1">What is sentiment analysis?</h2>
+<br>
+<article class="article-1">
+<p>Sentiment Analysis is the process of ‘computationally’ determining whether a piece of writing is positive, negative or neutral. It’s also known as opinion mining, deriving the opinion or attitude of a speaker.</p>
+</article>
+</div>
+</div>
+<div class="col-sm-6">
+<div class="firstpara">
+<br><br>
+<h2 class="h2-1">Why sentiment analysis?</h2>
+<br>
+<article class="article-1">
+-><b>Business</b> : In marketing field companies use it to develop their strategies, to understand customers’ feelings towards products or brand, how people respond to their campaigns or product launches and why consumers don’t buy some
+products.<br>
+-><b>Politics</b> : In political field, it is used to keep track of political view, to detect consistency and inconsistency between statements and actions at the government level. It can be used to predict election results as well!<br>
+-><b>Public Actions</b> : Sentiment analysis also is used to monitor and analyse social phenomena, for the spotting of potentially dangerous situations and determining the general mood of the blogosphere.
+</article>
+-->
+
+
+                    <!--
+<br>
+<h2 class="h2-1">What is Compound Score ?</h2><br>
+<article class="article-1">
+The Compound score is a metric that calculates the sum of all the lexicon ratings which have been normalized between -1(most extreme negative) and +1 (most extreme positive).<br>
+positive sentiment  : (compound score >= 0.05)<br>
+neutral sentiment   : (compound score > -0.05) and (compound score < 0.05)<br>
+negative sentiment  : (compound score <= -0.05)
+</article>
+-->
+                    <!--
+</div>
+</div>
+-->
+                    <div class="col-sm-6">
+                        <div class="firstpara">
+                            <br><br>
+                            <div class="containers ctg">
+                                <div class="boxes"><br>
+                                    <h4>Methodology</h4>
+                                    <article>
+                                        1) The dataset containing only tweet id is scraped , and tweets are extracted using hydrator app<br>2) Once the tweets are obtained , it is pre-processed, that involves removal of : <b><i><br>- html tags<br>- special characters<br>- punctuation marks <br>- converting to lower case characters <br>- replacing emoji <br>- emoticons <br>- short words<br>- tokenizing <br>- removing stop words <br>- stemming<br></i></b>3)The data is then split into training and test set , for validation<br>4) The data is trained with logistic regression classifier<br>5) Test data is used to predict the sentiments<br>6) The Model is then evaluated<br><br>
+                                    </article>
+                                </div>
+
+                                <!--
+<div class="accordion" id="accordionExample">
+<div class="card btnclr">
+<div class="card-header btnclr" id="headingEight">
+<h2 class="mb-0">
+<button class="btn btn-link btn-block text-center collapsed btnclr" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+<h3>Methodology</h3>
+</button>
+</h2>
+</div>
+<div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample">
+<div class="card-body">
+<article class="art-1">
+<p class="p-1">
+
+<b>1) The dataset containing only tweet id is scraped , and tweets are extracted using hydrator app<br>2) Once the tweets are obtained , it is pre - processed, that involves removal of : <i><br>- html tags<br>- special characters<br>- punctuation marks <br>- converting to lower case characters <br>- replacing emoji <br>- emoticons <br>- short words<br>- tokenizing <br>- removing stop words <br>- stemming<br></i>3) The data is then split into training and test set , for validation<br>4) The data is trained with logistic regression classifier<br>5) Test data is used to predict the sentiments<br>6) The Model is then evaluated<br><br></b>
+</p>
+</article>
+</div>
+</div>
+</div>
+-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="firstpara">
+                            <br><br>
+                            <article class="article-1"><br>
+                                <img src="{% static 'images/twitter.png' %}" class="img-fluid img-2" alt="Responsive image" >
+                            </article>
+                        </div>
+                    </div>
+                    <div class="col-sm-12"><br><br><br><br>
+                        <h1 class="h2-1">Features Of Our Model</h1>
+                    </div><br><br><br>
+                    <div class="col-sm-6">
+                        <div class="firstpara">
+                            <br><br>
+                            <!--                            <h2 class="h2-1">Logic Behind TF - IDF</h2>-->
+                            <br>
+                            <article class="article-1">
+                                <img src="{% static 'images/img2.jpg' %}" class="img-fluid img-1" alt="Responsive image" >
+                            </article>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="firstpara">
+                            <br><br><br><br>
+                            <div class="accordion" id="accordionExample">
+                                <div class="card btnclr">
+                                    <div class="card-header btnclr" id="headingSeven">
+                                        <h2 class="mb-0">
+                                            <button class="btn btn-link btn-block text-center collapsed btnclr" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                                <h4>Term frequency–Inverse document frequency</h4>
+                                            </button>
+                                        </h2>
+                                    </div>
+                                    <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            <article class="art-1">
+                                                <p class="p-1">
+                                                    <b>1.</b> The tf–idf is the product of two statistics, term frequency and inverse document frequency. There are various ways for determining the exact values of both statistics.<br>
+                                                    <br><b>2.</b> A formula that aims to define the importance of a keyword or phrase within a document or a web page.<br><br><br>
+                                                </p>
+                                                <div  class="lik" >
+                                                    <a href="https://en.wikipedia.org/wiki/Tf%E2%80%93idf#:~:text=In%20information%20retrieval%2C%20tf%E2%80%93idf,in%20a%20collection%20or%20corpus."  target="_blank">Check here for more information</a>
+                                                </div>
+                                            </article>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="firstpara">
+                            <br><br>
+                            <!--                            <h2 class="h2-1">Logistic Model</h2>-->
+                            <br>
+                            <article class="article-1">
+                                <img src="{% static 'images/img2.jpg' %}" class="img-fluid img-1" alt="Responsive image">
+                            </article>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="firstpara">
+                            <br><br><br><br>
+                            <div class="accordion" id="accordionExample">
+                                <div class="card btnclr">
+                                    <div class="card-header btnclr" id="headingSix">
+                                        <h2 class="mb-0">
+                                            <button class="btn btn-link btn-block text-center collapsed btnclr" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                                <h4>LOGISTIC REGRESSION</h4>
+                                            </button>
+                                        </h2>
+                                    </div>
+                                    <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            <article class="art-1">
+                                                <p class="p-1">
+                                                    Stemming is the process of reducing inflected (or sometimes derived) words to their word stem, base or root form—generally a written word form. The stem need not be identical to the morphological root of the word; it is usually sufficient that related words map to the same stem, even if this stem is not in itself a valid root. Many search engines treat words with the same stem as synonyms as a kind of query expansion, a process called conflation.<br><br><br>
+                                                </p>
+                                                <div  class="lik" >
+                                                    <a href="https://en.wikipedia.org/wiki/Logistic_regression#:~:text=Logistic%20regression%20is%20a%20statistical,a%20form%20of%20binary%20regression)."  target="_blank">Check here for more information</a>
+                                                </div>
+                                            </article>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="firstpara">
+                            <br><br>
+                            <!--                            <h2 class="h2-1">Porter Stemming</h2>-->
+                            <br>
+                            <article class="article-1">
+                                <img src="{% static 'images/stemming.png' %}" class="img-fluid img-1" alt="Responsive image">
+                            </article>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="firstpara">
+                            <br><br><br><br>
+                            <div class="accordion" id="accordionExample">
+                                <div class="card btnclr">
+                                    <div class="card-header btnclr" id="headingFour">
+                                        <h2 class="mb-0">
+                                            <button class="btn btn-link btn-block text-center collapsed btnclr" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                                <h4>STEMMING</h4>
+                                            </button>
+                                        </h2>
+                                    </div>
+                                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            <article class="art-1">
+                                                <p class="p-1">
+                                                    Stemming is the process of reducing inflected (or sometimes derived) words to their word stem, base or root form—generally a written word form. The stem need not be identical to the morphological root of the word; it is usually sufficient that related words map to the same stem, even if this stem is not in itself a valid root. Many search engines treat words with the same stem as synonyms as a kind of query expansion, a process called conflation.<br><br><br>
+                                                </p>
+                                                <div  class="lik" >
+                                                    <a href="https://nlp.stanford.edu/IR-book/html/htmledition/stemming-and-lemmatization-1.html"  target="_blank">Check here for more information</a>
+                                                </div>
+                                            </article>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="firstpara">
+                            <article class="article-1"><br><br>
+                                <img src="{% static 'images/smiley.png' %}" class="img-fluid " alt="Responsive image">
+                            </article>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="firstpara">
+                            <br><br><br><br>
+                            <div class="accordion" id="accordionExample">
+                                <div class="card btnclr">
+                                    <div class="card-header btnclr" id="headingFive">
+                                        <h2 class="mb-0">
+                                            <button class="btn btn-link btn-block text-center collapsed btnclr" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                                <h4>VADER Sentiment Analysis</h4>
+                                            </button>
+                                        </h2>
+                                    </div>
+                                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            <article class="art-1">
+                                                <p class="p-1">
+                                                    <b>VADER (Valence Aware Dictionary and Sentiment Reasoner)</b>is a lexicon and rule-based sentiment analysis tool that is specifically attuned to sentiments expressed in social media. VADER uses a combination of A sentiment lexicon is a list of lexical features (e.g., words) which are generally labeled according to their semantic orientation as either positive or negative. VADER not only tells about the Positivity and Negativity score but also tells us about how positive or negative a sentiment is.<br><br><br>
+                                                </p>
+                                                <div  class="lik" >
+                                                    <a href="http://t-redactyl.io/blog/2017/04/using-vader-to-handle-sentiment-analysis-with-social-media-text.html"  target="_blank">Check here for more information</a>
+                                                </div>
+                                            </article>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fixed">
+                        <script async>(function(w, d) { w.CollectId = "5ef82910b5e80f329e9a4e9c"; var h = d.head || d.getElementsByTagName("head")[0]; var s = d.createElement("script"); s.setAttribute("type", "text/javascript"); s.setAttribute("src", "https://collectcdn.com/launcher.js"); h.appendChild(s); })(window, document);</script>
+                    </div>
+                    <!--
+<div class="col-12 twitterimage">
+</div>
+-->
+                    <div class="col-12" id="team"><br><br><br>
+                        <h1 class="team">Our Team</h1><br><br>
+                    </div>
+                    <div class="col-sm-3 mid"><br><br>
+                        <div class="firstpara">
+                            <br>
+                            <article class="article-1 img-3 mid">
+                                <img src="{% static 'images/avatar-png-2-transparent.png' %}" class="img-fluid" alt="Responsive image">
+                            </article><br>
+                            <h2 class="h3-1">Aditya S</h2>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 mid"><br><br>
+                        <div class="firstpara">
+                            <br>
+                            <article class="article-1 img-3 mid">
+                               <img src="{% static 'images/avatar-png-2-transparent.png' %}" class="img-fluid " alt="Responsive image">
+                            </article><br>
+                            <h2 class="h3-1">Raghunaathan RR<br></h2>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 mid"><br><br>
+                        <div class="firstpara">
+                            <br>
+                            <article class="article-1 img-3 mid">
+                                <img src="{% static 'images/avatar-png-2-transparent.png' %}" class="img-fluid " alt="Responsive image">
+                            </article><br>
+                            <h2 class="h3-1">Ragavan B<br></h2>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 mid"><br><br>
+                        <div class="firstpara">
+                            <br>
+                            <article class="article-1 img-3 mid">
+                                 <img src="{% static 'images/female-avatar-png-4-transparent.png' %}" class="img-fluid " alt="Responsive image">
+                            </article><br>
+                            <h2 class="h3-1">Deeptika Kannan<br></h2>
+                        </div>
+                    </div>
+                </div>
+            </table>
+        </div><hr class="ftrclr">
+        <!-- Footer -->
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+        <script src="bootstrap-4.0.0-alpha.6-dist/js/bootstrap.min.js"></script>
+        <footer class="page-footer font-small blue footer">
+            <!-- Copyright -->
+            <div class="row">
+
+                <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+                    <p><u><a href="#team">RADR</a></u> is a Student Project Initiative, for IBM Hack Challenege 2020 </p>
+                    <p class="h6">© All right Reversed.<a class="text-green ml-2" href="#team" >RADR</a></p>
+                </div>
+                <hr>
+</div>
+
+        </footer>
+    </body>
+</html>
