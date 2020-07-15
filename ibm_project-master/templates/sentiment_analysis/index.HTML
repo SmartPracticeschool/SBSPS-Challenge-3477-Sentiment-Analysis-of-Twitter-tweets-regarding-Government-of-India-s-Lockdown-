@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+    <head>
+
+<style>
+.accordion {
+background-color: black;
+color: yellow;
+
+padding: 18px;
+width: 50%;
+border: none;
+text-align: left;
+
+font-size: 15px;
+transition: 0.6s;
+}
+
+.active, .accordion:hover {
+background-color: black;
+color:red;
+width: 100%;
+}
+
+.panel {
+border-left: 10px;
+
+border-bottom: 10px;
+border-top: 10px;
+border-right: 10px;
+padding: 0 18px;
+display: none;
+border:  solid ;
+
+border-color:red;
+border-width: 1px;
+cursor: pointer;
+background-color: black;
+color:whitesmoke;
+overflow: hidden;
+border-left: 50px;
+width: 100%;
+align-content: center;
+}
+</style>
+
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!--Bootstrap CSS-->
+       {% load static %}
+        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+        <link href="{% static 'css/bootstrap-grid.min.css' %}" rel="stylesheet"> 
+        <link href="{% static 'css/imbpage.css' %}" rel="stylesheet">
+        <link href="{% static 'css/formstyle.css' %}" rel="stylesheet">
+        <title>Home</title>
+    </head>
+    <body class="bdy">
+
+        <p style="font-size: 25px; font-style: italic; padding-left: 100px;">
+            {% for message in messages %}
+                {{ message }}
+            {% endfor %}
+        </p>
+      <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand" href="#team">RADR</a>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                  <a class="navbar-brand" href=href="{% url 'home' %}">Home<span class="sr-only">(current)</span></a>
+                  <a class="navbar-brand" href="{% url 'about' %}">About</a>
+                  <a class="navbar-brand" href="{% url 'form' %}">Feedback</a>
+                  <a class="navbar-brand" href="{% url 'dashboard2' %}">Dashboard</a>
+              </div>
+          </div>
+      </nav>
+      <table>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="firstpara" id="video">
+                        <iframe width="100%" height="778px" src="https://www.youtube.com/embed/O_B7XLfx0ic" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <br>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="firstpara">
+
+<br>
+<br>
+<br>
+
+                        <div class="containers ctrg">
+                            <div class="box"><br>
+                                <h3 style="text-align:center";><b>About us</b></h3>
+                                <article style="text-align:center";>
+                                  <br>
+                                    We team of four made a machine learning predictive model for the sentiment analysis of twitter messages to predict the reaction of people towards the extension of lockdown.This project is made for the  IBM Hack Challenge 2020 hackathon.</article>
+                            </div>
+                            <div class="box"><br>
+                                <h3 style="text-align:center";><b>Our Goal</b></h3>
+                                <article style="text-align:center";><br>
+                                  We plan to develop a succecsul analytics model to help companies target the right audience and at the right time. We would help our partners and work constantly alongside them in improving the product reach.
+                              </article>
+                            </div>
+                            <div class="box"><br>
+                                <h3 style="text-align:center";><b>Always Updated</b></h3>
+                                <article style="text-align:center"; ><br>
+                                  Our services constantly evolve alongside us and always remain onpar with the latest technological discoveries.</article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              <!--  <div class="col-sm-4 ctrs" >
+                    <br>
+                    <br><br><br><br>
+                    <div class="boxes">
+
+                    <h3>About Us</h3>
+                    <br>
+
+                    <div class="cts">
+                        <article >We team of four made a machine learning predictive model for the sentiment analysis of twitter messages to predict the reaction of people towards the extension of lockdown.This project is made for the  IBM Hack Challenge 2020 hackathon.</article>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="col-sm-4 ctrs">
+                    <br><br><br><br><br>
+
+                    <div class="boxes">
+                    <h3 class="h2-1">Our Goal</h3>
+                    <div class="cts">
+                    <article >
+                        We plan to develop a succecsul analytics model to help companies target the right audience and at the right time. We would help our partners and work constantly alongside them in improving the product reach.
+                    </article>
+                    </div>
+                </div>
+                  </div>
+                <br>
+                <br>
+                <div class="col-sm-4 ctrs" >
+                    <br><br><br><br>
+
+                    <div class="boxes">
+                    <h3>Always Updated</h3>
+
+                    <div class="pec">
+                        <article style="text-align: left">Our services constantly evolve alongside us and always remain onpar with the latest technological discoveries.</article>
+                    </div>
+                </div>
+                  </div>
+
+-->
+
+
+                <!--
+<div class="col-sm-12">
+<div class="firstpara">
+<h2>RADR</h2>
+</div>
+</div>
+-->
+<br><br>
+<br>
+<br>
+<br>
+<br>
+
+
+                <div class="col-sm-6">
+                    <div class="firstpara">
+                        <article class="article-1">
+                            <div class="img-1"><br><br><br><br><br>
+                                 <img &emsp; src = "{% static 'images/ragimg2.png' %}" class="img-fluid ";alt="Responsive image">
+                            </div><br><br><br>
+                            <br>
+                        </article>
+                    </div>
+                </div>
+              
+
+            <br>
+
+            <br>
+            <div classs="faq">
+                <div class="col-12">
+                    <div class="firstpara">
+                        <br><br><br><br><br>
+                        <h3 class="h3-3">FAQ's</h3><br><br><br>
+                        <button class="accordion"><b>What Is Sentiment Analysis?</b></button>
+                        <div class="panel">
+                            <p style="text-align:justify";>Sentiment analysis is the automated process of identifying and extracting the subjective information that underlies a text. This can be either an opinion, a judgment, or a feeling about a particular topic or subject. The most common type of sentiment analysis is called polarity detection and involves classifying a statement as positive, negative, or neutral.</p>
+                        </div>
+
+                        <button class="accordion"><b>Why Is Sentiment Analysis Important?</b></button>
+                        <div class="panel">
+                            <p style="text-align:justify";>Sentiment analysis is extremely useful in social media monitoring as it allows us to gain an overview of the wider public opinion behind certain topics. ... The ability to extract insights from social data is a practice that is being widely adopted by organisations across the world.</p></div>
+                        <button class="accordion"><b>What are the most popular application areas for sentiment analysis?</b></button>
+                        <div class="panel">
+                            <p style="text-align:justify";>The most common applications of natural language processing fall into three broad categories: Social Media Monitoring, Customer Experience Management and Voice of Customer, and People Analytics and Voice of Employee</p>
+                        </div>
+                        <button class="accordion"><b>What is a good sentiment score?</b></button>
+                        <div class="panel">
+                            <p style="text-align:justify";>The score indicates how negative or positive the overall text analyzed is. Anything below a score of -0.05 we tag as negative and anything above 0.05 we tag as positive. Anything in between inclusively, we tag as neutral.</p>
+                        </div>
+                        <button class="accordion"><b>How is accuracy calculated in sentiment analysis?</b></button>
+                        <div class="panel">
+                            <p style="text-align:justify";>We divide the dataset for training and test purposes into two parts ( sometimes it may be three also for validation). The accuracy can be checked by comparing annotated test records. However rather than using only accuracy rate F-measure, TP ( True Positive), FP (False Positive) will also help.</p>
+                        </div>
+                        <button class="accordion"><b>Is Sentiment analysis easy?</b></button>
+                        <div class="panel">
+                            <p style="text-align:justify";>Sentiment analysis is not an easy task to perform. Text data often comes pre-loaded with a lot of noise.Sentiment analysis can easily be misled by the presence of such sarcastic words and hence, sarcasm detection is a vital preprocessing step in many NLP tasks</p>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                var acc = document.getElementsByClassName("accordion");
+                var i;
+
+                for (i = 0; i < acc.length; i++) {
+                    acc[i].addEventListener("click", function() {
+                        this.classList.toggle("active");
+                        var panel = this.nextElementSibling;
+                        if (panel.style.display === "block") {
+                            panel.style.display = "none";
+                        } else {
+                            panel.style.display = "block";
+                        }
+                    });
+                }
+            </script>
+            <br>
+            <br><br>
+            <br>
+          </div>
+        </table>
+        <div class="fixed">
+            <script async>(function(w, d) { w.CollectId = "5ef82910b5e80f329e9a4e9c"; var h = d.head || d.getElementsByTagName("head")[0]; var s = d.createElement("script"); s.setAttribute("type", "text/javascript"); s.setAttribute("src", "https://collectcdn.com/launcher.js"); h.appendChild(s); })(window, document);</script>
+        </div>
+        <!-- Footer -->
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+        <script src="bootstrap-4.0.0-alpha.6-dist/js/bootstrap.min.js"></script>
+        <div class="footsy">
+            <hr class="hr-r">
+            <footer class="page-footer font-small blue footer">
+                <div class="fff">
+                    <!-- Copyright -->
+                    <div class="text-center text-white">
+                        <br>
+                        <br>
+                        <p><u><a href="#team">RADR</a></u> is a Student Project Initiative, for IBM Hack Challenege 2020 </p>
+                        <p class="h6">© All right Reversed.<a class="text-green ml-2" href="#team" target="_blank">RADR</a></p>
+                    </div>
+                    <hr>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

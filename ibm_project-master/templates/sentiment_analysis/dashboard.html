@@ -1,0 +1,317 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!--Bootstrap CSS-->
+        {% load static %}
+        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+        <link href="{% static 'css/bootstrap-grid.min.css' %}" rel="stylesheet"> 
+        <link rel="stylesheet" href="{% static 'css/dashstyle.css' %}">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            h4 {
+                color:white;
+            }
+            div.scroll {
+                margin:4px, 4px;
+                padding:4px;
+                background-color: floralwhite;
+                width: 400px;
+                height: 250px;
+                overflow-x: hidden;
+                overflow-y: auto;
+                text-align:justify;
+            }
+        </style>
+        <title>Dashboard</title>
+    </head>
+    <body class="bdyclr">
+        <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#">RADR</a>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link active" href="{% url 'home' %}">Home<span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link active" href="{% url 'about' %}">About</a>
+                    <a class="navbar-item nav-link active" href="{% url 'form' %}">Feedback</a>
+                  <a class="nav-item nav-link active" href="{% url 'dashboard' %}">Dashboard</a>
+                </div>
+            </div>
+        </nav>
+        <table>
+            <div class="row">
+                <div class="col-sm-9 w3-container" style="padding-top:10px">
+                    <h1 style="color: white";><b><i class="fa fa-dashboard" style="color: #00acee";></i>Sentiment Dashboard</b></h1>
+                </div>
+                <div class="col-sm-3 twttr">
+                    <img src="{% static 'images/icons8-twitter-96.png' %}" class="twittr">
+                </div>
+            </div>
+        </table>
+        <div class="w3-row-padding w3-margin-bottom">
+            <div class="w3-quarter">
+                <div class="w3-container w3-red w3-padding-16">
+                    <div class="w3-left"><i class="fa fa-comment w3-xxxlarge"></i></div>
+                    <div class="w3-right">
+                        <h3><b>3,19,685</b></h3>
+                    </div>
+                    <div class="w3-clear"></div>
+                    <h4>Tweets</h4>
+                </div>
+            </div>
+            <div class="w3-quarter">
+                <div class="w3-container w3-blue w3-padding-16">
+                    <div class="w3-left"><i class="fa fa-plus w3-xxxlarge"></i></div>
+                    <div class="w3-right">
+                        <h3><b>37%</b></h3>
+                    </div>
+                    <div class="w3-clear"></div>
+                    <h4>Positive Percentage</h4>
+                </div>
+            </div>
+            <div class="w3-quarter">
+                <div class="w3-container w3-teal w3-padding-16">
+                    <div class="w3-left"><i class="fa fa-minus w3-xxxlarge"></i></div>
+                    <div class="w3-right">
+                        <h3><b>34%</b></h3>
+                    </div>
+                    <div class="w3-clear"></div>
+                    <h4>Negative Percentage</h4>
+                </div>
+            </div>
+            <div class="w3-quarter">
+                <div class="w3-container w3-orange w3-text-white w3-padding-16">
+                    <div class="w3-left"><i class="fa fa-users w3-xxxlarge"></i></div>
+                    <div class="w3-right">
+                        <h3><b>2,43,236</b></h3>
+                    </div>
+                    <div class="w3-clear"></div>
+                    <h4>Users</h4>
+                </div>
+            </div>
+        </div>
+        <table>
+            <div class="row">
+                <div class="col-sm-4 upspace"><br>
+                    <h4>Sentiment based on hashtags</h4>
+                    <img src="{% static 'images/Hashtags.PNG' %}">
+                </div>
+                <div class="col-sm-4 upspace"><br>
+                    <h4>Sentiment based on keywords</h4>
+                    <img src="{% static 'images/tweets analysis.PNG' %}">
+                </div>
+                <div class="col-sm-4 upspace"><br>
+                    <h4>Sentiment of retweets</h4>
+                    <img src="{% static 'images/retweets analysis.PNG' %}">
+                </div>
+            </div>
+        </table>
+        <br>
+        <table>
+            <div class="row rowspace">
+                <div class="col-sm-4 clcolor h4-3">
+                    <h4 >Popular Hashtags</h4><br>
+                    <div class="imgcenter agn">
+                        <iframe width="476" height="278.5" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTR0DfB7ng-yVKCfDZA6M7HlrGdJvJzLk6i6fazpKT-pnjldAcsLUHlG43H8zUjYFAf3x87eyuXmdkz/pubchart?oid=1239209752&amp;format=interactive"></iframe>
+                    </div>
+                </div>
+                <div class="col-sm-4 clcolor h4-3">
+                    <h4>Popular Keywords</h4><br>
+                    <div class="imgcenter agn">
+                        <iframe width="467" height="278.5" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT83MtHII8a15IE0jsqlahXTugpAZbQxpPrXIY5b5xm0xp0rHX1yYihzQ_fEsu45UMkhZ9b2yj309QC/pubchart?oid=1600873353&amp;format=interactive"></iframe>
+                    </div>
+                </div>
+                <div class="col-sm-4 colcolor fitcenter">
+                    <h3 class="h3-1">Quick Support</h3>
+                    <div class="accordion" id="accordionExample">
+                        <div class="card btnclr">
+                            <div class="card-header btnclr" id="headingOne">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link btn-block text-center collapsed btnclr" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                        Live corona trend
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <article class="art-1">
+                                        <p class="p-1">
+                                                                                    </p>
+                                        <a href="https://www.worldometers.info/coronavirus/country/india/"  target="_blank" class="lik">Check here for more information</a>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card btnclr">
+                            <div class="card-header btnclr" id="headingTwo">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link btn-block text-center collapsed btnclr" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Know the hotspots around you
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <article class="art-1">
+                                        <p class="p-1">
+                                            Government has categorized the map into three zones, namely RED, ORANGE and GREEN. RED zone is called the containment zone or covid hotspot region. Keep 6 km distance away from the containment zones if possible. Stay home and stay safe.
+                                        </p>
+                                        <a href="https://www.covidhotspots.in/"  target="_blank" class="lik">Check here for more information</a>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card btnclr">
+                            <div class="card-header btnclr" id="headingThree">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link btn-block text-center collapsed btnclr" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        Know the covid test centres around you
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <article class="art-1">
+                                        Use this map for knowing the location of test centres around you
+                                        <a href="https://www.google.com/maps/d/viewer?mid=1YfaJKmfs2xnuqXjOyHXxVR6ZFZtZnU6N&ll=13.004360079653473%2C80.11708983465962&z=11"  target="_blank" class="lik">Look here for the map</a>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 r0w-2 agn"><br>
+                    <h4>Popular Indian Tweets</h4><br>
+                    <iframe width="374" height="245.16916666666668" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR4rZe_2O4LQLLdQIwAuJ7j104s7te5MKR8sjpTbyYQz0qMnoARoNLoYdhtepr6rYtdDn8Gvt5WGJj6/pubchart?oid=1425688149&amp;format=interactive"></iframe>
+                </div>
+                <div class="col-sm-4 r0w-2 agn"><br>
+                    <h4>Overall Sentiment Score</h4><br>
+                    <img class="sentipi" src="{% static 'images/smileymeter.png' %}">
+                </div>
+
+                <div class="col-sm-4 r0w-3"><br>
+                    <body>
+                        <center>
+                            <h4>Most Popular COVID-19 tweets</h4><br>
+                            <div class="scroll">
+                                <ol>
+                                    <li>virus, I’m hoping and praying, the next test they do will be negative and she can come home, missing her so much, thankyou for all the love and support 🙏🏻❤️ </li>
+                                    <li>My parents have tested positive for Corona. Lord give them strength.</li>
+                                    <li>If you like Corona in your country, you’ll love Huawei in your home. UK moves to drop Huawei as 5G vendor China transparency </li>
+                                    <li>I’m getting more scared of diabetes than Corona <b>https://t.co/ecKtxPIIDB</b></li>
+                                    <li>it's always a relief to see a death that is not corona-related <b>https://t.co/rfw4HPSzRV</b></li>
+                                    <li>Over the moon to hear the news today that my grandad has beat the corona virus and is back home to my nan ❤️❤️🙏🏼 <b>https://t.co/VOad7vB0iq</b></li>
+                                    <li>@DailyMail Corona reading this :<b> https://t.co/JxtXUPhSRW</b></li>
+                                    <li>These are the highest-resolution views ever captured of the Sun’s outer atmosphere, the corona.This data from a @NASA sounding rocket mission reveals fine structure in this part of the Sun, showing loops of material as thin as 125 miles across. More: <b>https://t.co/T50kWYkHhb</b><b>https://t.co/0FBpQzwhBU></b></li>
+                                    <li>#ReleaseAllPoliticalPrisoners<br><b>https://t.co/DsLkFbjR7A</b></li>
+                                    <li>Sad to think that Dr Kafeel Khan is still in jail for a lecture full of patriotism that was delivered in my presence at AMU.The country misses doctors like you in this fight against Corona.With you  spirit. <b>#ReleaseDrKafeelkhan</b></li>
+                                </ol>
+                            </div>
+                        </center>
+                    </body>
+                </div>
+<script>
+window.onload = function(){
+    document.getElementById("red")[0].disabled = true;
+    setTimeout(function(){
+        var element = document.getElementById("red")[0] ;
+        element.disabled = false;
+    }, 3000);
+}
+</script>
+
+<script>
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+<script type="text/javascript">
+
+       function picture(){
+       var pic = "smiley.png"
+       document.getElementById('bigpic').src = pic.replace('90x90', '225x225');
+
+       }
+
+
+   </script>
+
+
+                <div class="col-sm-12 r0w-2 ctr"><hr class="hr-2">
+                    <h4 class="lftalgn">Sentiment Timeline</h4><hr class="hr-2">
+                    <div class="col-sm-12 txtalgnrght">
+                        <p>
+
+                          <a class="dropbtn" id="blue" href="#yesterday" role="button" >Yesterday</a>
+                               
+                                <a class="dropbtn" id="blue" href="{%url 'dashboard2'%}" >Past Week</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-12 r0w-4">
+                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active agn">
+                                <iframe width="1386" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT-P7DI_ia9LiRZd41Vs1D0sSSHmfjdId79uVRs5fE3LVkPhva0gGUPF37VXk3lgw/pubchart?oid=1885613679&amp;format=interactive"></iframe>
+                            </div>
+                            <div class="carousel-item agn">
+                                <!--                                <img src="Area%20chart.PNG" class="d-block w-100 hrwisimg" class="img-fluid" alt="Responsive image">-->
+                                <iframe width="1386.5" height="361" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRZwbcBtV0pU8Gkb3Di1aOC0OhhRjGZWtWg_L-KpmgM1reen-_jQbE4bYOTSMyqTXnEoYPmzUAigtOl/pubchart?oid=1115363663&amp;format=interactive"></iframe>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon blck" aria-hidden="true"></span>
+                            <span class="sr-only blck">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon blc-k" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                            <hr class="hr-2">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </table>
+        <div class="fixed">
+            <script async>(function(w, d) { w.CollectId = "5ef82910b5e80f329e9a4e9c"; var h = d.head || d.getElementsByTagName("head")[0]; var s = d.createElement("script"); s.setAttribute("type", "text/javascript"); s.setAttribute("src", "https://collectcdn.com/launcher.js"); h.appendChild(s); })(window, document);</script>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+        <script src="bootstrap-4.0.0-alpha.6-dist/js/bootstrap.min.js"></script>
+        <hr class="ftrclr">
+        <div class="footsy">
+            <footer class="page-footer font-small blue footer">
+                <!-- Copyright -->
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+                        <p><u><a href="RADR/">RADR</a></u> is a Student Project Initiative, for IBM Hack Challenege 2020 </p>
+                        <p class="h6">© All right Reversed.<a class="text-green ml-2" href="RADR" target="_blank">RADR</a></p>
+                    </div>
+                    <hr>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

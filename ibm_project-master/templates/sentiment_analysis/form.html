@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <style>
+.accordion {
+background-color: black;
+color: yellow;
+
+padding: 18px;
+width: 50%;
+border: none;
+text-align: left;
+
+font-size: 15px;
+transition: 0.6s;
+}
+
+.active, .accordion:hover {
+background-color: black;
+color:red;
+width: 100%;
+}
+
+.panel {
+border-left: 10px;
+
+border-bottom: 10px;
+border-top: 10px;
+border-right: 10px;
+padding: 0 18px;
+display: none;
+border:  solid ;
+
+border-color:red;
+border-width: 1px;
+cursor: pointer;
+background-color: black;
+color:whitesmoke;
+overflow: hidden;
+border-left: 50px;
+width: 100%;
+align-content: center;
+}
+</style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/bootstrap-grid.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/bootstrap-grid.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/imbpage.css' %}" rel="stylesheet">
+    <link href="{% static 'css/formstyle.css' %}" rel="stylesheet">
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>  
+    <title>RADR-Registration</title>
+</head>
+<body class="bdy">
+    <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#team">RADR</a>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="{% url 'home' %}">Home<span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link active" href="{% url 'about' %}">About</a>
+                <a class="nav-item nav-link active" href="{% url 'form' %}">Feedback</a>
+                <a class="nav-item nav-link active" href="{% url 'dashboard2' %}">Dashboard</a>
+            </div>
+        </div>
+    </nav>
+
+    <div style="align-items: center; display: flex;" >
+        <div class="col-sm-6">
+            <div class="firstpara">
+                <article class="article-1">
+                    <div class="img-1">
+                        <img &emsp; src = "{% static 'images/ragimg2.png' %}" class="img-fluid ";alt="Responsive image">
+                    </div>
+                </article>
+            </div>
+        </div>
+    
+        <div class="col-sm-6 colspec">
+            <div class="container col-sm-12">
+                <h3 style="text-align:center; padding-top: 100px;"><b>To connect with us, register here!</b></h3><br>
+                <br><br><br>
+                    {% load crispy_forms_tags %}
+                    {% crispy form %}
+            </div>
+        </div>
+    
+        <div class="fixed">
+            <script async>(function(w, d) { w.CollectId = "5ef82910b5e80f329e9a4e9c"; var h = d.head || d.getElementsByTagName("head")[0]; var s = d.createElement("script"); s.setAttribute("type", "text/javascript"); s.setAttribute("src", "https://collectcdn.com/launcher.js"); h.appendChild(s); })(window, document);</script>
+        </div>
+    </div>
+    <br>
+    <!-- Footer -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+    <script src="bootstrap-4.0.0-alpha.6-dist/js/bootstrap.min.js"></script>
+    <div class="footsy">
+        <hr class="hr-r">
+        <footer class="page-footer font-small blue footer">
+            <div class="fff">
+            <!-- Copyright -->
+                <div class="text-center text-white">
+                    <br>
+                    <p><u><a href="#team">RADR</a></u> is a Student Project Initiative, for IBM Hack Challenge 2020 </p>
+                    <p class="h6">© All rights reserved.<a class="text-green ml-2" href="#team" target="_blank">RADR</a></p>
+                </div>
+                <hr>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+ 
