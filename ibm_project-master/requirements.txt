@@ -63,7 +63,7 @@ tqdm==4.47.0
 tweepy==3.8.0
 typed-ast==1.4.1
 tzlocal==2.1
-urllib3==1.25.9
+urllib3==1.26.5
 virtualenv==16.7.9
 virtualenv-clone==0.5.3
 whitenoise==5.1.0
