@@ -23,7 +23,7 @@ gunicorn==20.0.4
 idna==2.10
 isort==4.3.21
 jmespath==0.10.0
-joblib==0.16.0
+joblib==1.2.0
 Js2Py==0.70
 kiwisolver==1.2.0
 lazy-object-proxy==1.4.3
